@@ -10,9 +10,9 @@ pipeline {
 
     environment {
         SCANNER_HOME = tool 'sonar-scanner'
-        DOCKER_IMAGE = 'akshu20791/bms:latest'
-        EKS_CLUSTER_NAME = 'akshat-eks'
-        AWS_REGION = 'us-east-1'
+        DOCKER_IMAGE = 'upasanachatterjee2003/bms:latest'
+        EKS_CLUSTER_NAME = 'upasana1-eks'
+        AWS_REGION = 'us-west-2'
     }
 
     stages {
@@ -127,7 +127,7 @@ pipeline {
                 body: "Project: ${env.JOB_NAME}<br/>" +
                       "Build Number: ${env.BUILD_NUMBER}<br/>" +
                       "URL: ${env.BUILD_URL}<br/>",
-                to: 'kastrokiran@gmail.com',
+                to: 'upasanachatterjee2003@gmail.com',
                 attachmentsPattern: 'trivyfs.txt'
         }
     }
