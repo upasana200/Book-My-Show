@@ -5,14 +5,14 @@ pipeline {
 
     tools {
         jdk 'jdk17'
-        nodejs 'node23'
+        nodejs 'node24'
     }
 
     environment {
         SCANNER_HOME = tool 'sonar-scanner'
         DOCKER_IMAGE = 'upasanachatterjee2003/bms:latest'
         EKS_CLUSTER_NAME = 'upasana1-eks'
-        AWS_REGION = 'us-west-2'
+        AWS_REGION = 'us-east-1'
     }
 
     stages {
